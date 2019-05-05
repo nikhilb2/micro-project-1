@@ -12,7 +12,6 @@ class InputForm extends Component {
   }
   render() {
     const { name, comment, submitPress } = this.state
-    console.log(this.state);
     return (
       <div>
         <Form>
@@ -31,10 +30,10 @@ class InputForm extends Component {
         <Form.Group controlId="Form.ControlSelect1">
         <Form.Label>Rate your experience</Form.Label>
         <Form.Control  size="lg"  as="select">
-          <option>Very bad</option>
-          <option>Not good</option>
-          <option selected>Good</option>
           <option>Very Good</option>
+          <option>Not good</option>
+          <option>Good</option>
+          <option>Very Bad</option>
           <option>Excellent</option>
         </Form.Control>
       </Form.Group>
