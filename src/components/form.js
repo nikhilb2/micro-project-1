@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Card } from 'react-bootstrap'
 
 class InputForm extends Component {
   constructor(props) {
@@ -61,12 +61,19 @@ class InputForm extends Component {
 
         {submitPress
           ? (<div>
-              <h3>Thanks for your response, {name}</h3>
-              <div><strong>Your comment</strong>: {comment}</div>
-              <Button onClick={(e)=>{
+                  <Card>
+        <Card.Header>Thanks for your response, {name}</Card.Header>
+        <Card.Body>
+          <Card.Title>Your comment</Card.Title>
+          <Card.Text>
+           {comment}
+          </Card.Text>
+          <Button onClick={(e)=>{
                 e.preventDefault()
                 this.setState({submitPress:false})
-              }}>ok</Button>
+              }}>Ok</Button>
+            </Card.Body>
+          </Card>
             </div>)
           : null
         }
